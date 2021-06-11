@@ -14,5 +14,30 @@ fn main() {
         }
     };
 
+    let x = if result > 10 { 100 } else { 200 };
+
     println!("result is {}!", result);
+    println!("x is {}!", x);
+
+    println!("five() == {}", five());
+
+    let y = {
+        counter = 0;
+        let result = loop {
+            counter += 1;
+
+            if counter == stopper {
+                break counter * 2;
+            }
+        };
+
+        if result > 10 { 100 } else { 300 }
+    };
+
+    println!("y is {}!", y);
+}
+
+
+fn five() -> u32 {
+    5
 }
